@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>MIK Drone Monitor</title>
+<style>
+body { font-family: sans-serif; text-align: center; padding-top: 50px; background: #1a1a1a; color: white; }
+#altitude-display { font-size: 72px; font-weight: bold; color: #00ff00; }
+.unit { font-size: 24px; color: #888; }
+</style>
+</head>
+<body>
+<h1>Телеметрия дрона MIK</h1>
+<div id="altitude-display">0.00</div>
+<div class="unit">метров над землей</div>
+
+<script>
+const socket = new WebSocket('ws://' + window.location.host + '/ws/drone/');
+</script>
+
+</body>
+</html>
